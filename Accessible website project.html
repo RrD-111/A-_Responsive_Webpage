@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="jquery.min.js"></script>
+  <script src="script.js"></script>
+  <style>
+    /*Minified CSS */
+    body{color:#000;background-color:#f8f8f8;font-family:Arial,sans-serif;font-size:100%;}h1,h2,h3,h4,h5,h6{color:#333}.container{max-width:960px;margin:0 auto;padding:20px;box-sizing:border-box}p{color:#555;line-height:1.5;}.content{display:flex;flex-direction:column;align-items:center;text-align:center;border: 1px solid #333;padding:20px;background-color:#fff;}a{color:#007bff;text-decoration:none}header{background-color:#fff;padding:20px;display:flex;justify-content:space-between;align-items:center}.logo{width:150px;height:50px}.logo img{max-width:100%;max-height:100%}.search-bar{display:flex;align-items:center}.search-bar input[type="text"]{padding:5px;border:1px solid #ccc;border-radius:3px}.search-bar button{padding:5px 10px;background-color:#007bff;color:#fff;border:none;border-radius:3px;cursor:pointer;margin-left:10px}nav ul{list-style:none;display:flex;}nav ul li{margin-left:10px;}@media (max-width:768px){header{flex-direction:column;align-items:flex-start}@media screen and (max-width:1200px){body{font-size:1.2rem;}}@media screen and (max-width:800px){body{font-size:1.4rem;}}@media screen and (max-width:600px){body{font-size:1.6rem;}}@media screen and (max-width:480px){}.logo{margin-bottom:10px}.search-bar{flex-direction:column;align-items:flex-start;margin-top:10px}.search-bar button{margin-left:0;margin-top:10px}}footer{display:flex;justify-content:center;align-items:center;height:100px;text-align:center}:focus{outline:2px solid #007bff}button:focus{outline:none;box-shadow:0 0 0 2px #007bff}
+  </style>
+  <!-- Minified Js script-->
+  <script>document.addEventListener("DOMContentLoaded",function(){const o=document.querySelectorAll("a"),e=document.querySelectorAll("button");function t(o){9===o.keyCode&&(document.body.classList.add("user-is-tabbing"),window.removeEventListener("keydown",t))}window.addEventListener("keydown",t),o.forEach(function(o){o.addEventListener("focus",function(){document.body.classList.remove("user-is-tabbing")})}),e.forEach(function(o){o.addEventListener("focus",function(){document.body.classList.remove("user-is-tabbing")})})});
+  </script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="https://knowbility.org/media/pages/blog/whats-new-in-wcag-2-2/727f9e00a4-1674638910/wcag_2-2.png" alt="Logo" aria-label="Website Logo">
+    </div>
+    <div class="search-bar">
+      <label for="search">Search:</label>
+      <input type="text" id="search" placeholder="Search">
+      <button>Search</button>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Landing page (Home page) -->
+  <div id="landing-page">
+    <section class="content">
+      <h1>Welcome to My Website</h1>
+      <div class="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/FsGussrOX60" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt7F8NQOfjndcqaeU0ak3DJA_kFWbhnyJIRQ&usqp=CAU" alt="Sample Image" aria-label="Sample Image">
+      </div>
+      <p>Developing Websites for Accessibility Getting Started: 201 .This is a webpage on accessibility as per the instructions laid out in the project guiideline.</p>
+    </section>
+  </div>
+
+  <!-- About Us page -->
+  <div id="about-page">
+    <section class="content">
+      <h1>About Us</h1>
+      <p>This page has been made in compliance with the WCAG 2.1 Level-AA Guidelines.</p>
+      <audio controls aria-label="Audio Clip">
+        <source src="Audio-clip.wav" type="audio/wav">
+        Your browser does not support the audio element.
+      </audio>
+    </section>
+  </div>
+
+  <!-- Contact page -->
+  <div id="contact-page">
+    <section class="content">
+      <h1>Contact</h1>
+      <p>Contact information goes here. As per the project guideline</p>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required aria-required="true" tabindex="1">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required aria-required="true" tabindex="2">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required aria-required="true" tabindex="3"></textarea>
+        <button type="submit" tabindex="4">Send</button>
+      </form>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2023 My Website. All rights reserved. | <a href="https://www.w3.org/WAI/WCAG21/quickref/" target="_blank" rel="noopener">WCAG 2.1 Level-AA Guidelines</a></p>
+  </footer>
+
+</body>
+
+</html>
